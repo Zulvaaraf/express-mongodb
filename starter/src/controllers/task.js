@@ -1,5 +1,12 @@
-const postTask = (req, res) => {
-  res.json('this is post');
+import Task from '../../models/Task.js';
+
+const postTask = async (req, res) => {
+  try {
+    const task = await Task.create(req.body);
+    res.status(201).json({ task });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 };
 
 const getTask = (req, res) => {
