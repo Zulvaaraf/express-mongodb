@@ -1,11 +1,12 @@
 import mongoose from 'mongoose';
+import { Schema } from 'mongoose';
 
-const TaskSchema = new mongoose.Schema({
+const TaskSchema = new Schema({
   name: {
     type: String,
     required: [true, 'must provide name'],
     trim: true,
-    maxLength: [20, 'name can not be more than 20 characters'],
+    maxLength: [20, 'name cannot be more than 20 characters'],
   },
   completed: {
     type: Boolean,
