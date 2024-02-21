@@ -1,5 +1,5 @@
 import Task from '../models/Task.js';
-import asyncWrapper from '../../starter/src/middleware/async-wrapper.js';
+import asyncWrapper from '../middleware/AsyncWrapper.js';
 
 const postTaskHandler = asyncWrapper(async (req, res) => {
   const task = await Task.create(req.body);

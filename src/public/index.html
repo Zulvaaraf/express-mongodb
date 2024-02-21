@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+
+    <form class="task-form">
+        <h4>Task Manager</h4>
+        <div class="form-control">
+            <input type="text" name="name" class="task-input" placeholder="task">
+            <button type="submit" class="btn btn-submit">submit</button>
+        </div>
+        <button class="form-alert"></button>
+    </form>
+    <section class="tasks-container">
+        <p class="loading-text">Loading...</p>
+        <div class="tasks"></div>
+    </section>
+
+    <script src="./browser-app.js"></script>
+</body>
+
+</html>

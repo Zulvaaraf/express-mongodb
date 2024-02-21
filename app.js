@@ -12,6 +12,8 @@ app.use(express.json());
 
 app.use('/api/tasks', router);
 
+app.use(express.static('./src/public'));
+
 const start = async () => {
   try {
     await connectDatabase(process.env.MONGO_URI);
